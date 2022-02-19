@@ -1,0 +1,16 @@
+.outerNavbar{
+    border: 1px solid black;
+    height: 10vh;
+    background-color: coral;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    
+}
+
+.bold{
+    font-weight: 900;
+    font-size: 32px;
+}
