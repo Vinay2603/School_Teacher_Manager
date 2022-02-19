@@ -4,9 +4,9 @@ const teacherSchema = new  mongoose.Schema({
      Name:{ type:String, require:true},
      Gender :{ type:String, require:true},
       Age :{ type:Number, require:true},
-      Classes :[ {
+      classes :[ {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Classes",
+        ref: "classes",
         required:false
       }]
 },{

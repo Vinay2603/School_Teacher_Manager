@@ -1,16 +1,15 @@
 import "./Navbar.css"
+import { Link } from "react-router-dom"
 
 export const Navbar = ()=>{
     return(
         <div className="outerNavbar">
-            <div className="bold">Home</div>
-            <div>
-                <input placeholder="Enter Teacher name"  />
-                <button>Search</button>
-            </div>
-            <div className="bold">
-                Admin
-            </div>
+    
+            <h1>School Teacher Manager</h1>
+
+            <div className="bold"><Link to="/" style={{textDecoration: "none"}}>LOGIN</Link></div>
+           
+           
         </div>
     )
 }
