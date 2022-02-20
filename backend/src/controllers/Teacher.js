@@ -72,9 +72,11 @@ router.get("/:id",async(req,res)=>{
 
 router.get("/name/:Name",async(req,res)=>{
     try{
+        const size = +req.query.size || 4;
+
         const teacher = await Teacher.find({Name:req.params.Name}).populate("classes").lean().exec()
-        
-        return res.status(201).send(teacher)
+          const totalPages = Math.ceil((await Teacher.find().countDocuments())/size)
+        return res.status(201).send({teacher,totalPages})
     }catch(e){
        return res.status(401).json({message : e.message })
     }
